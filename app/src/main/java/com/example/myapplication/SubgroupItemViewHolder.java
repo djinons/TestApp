@@ -26,6 +26,7 @@ public class SubgroupItemViewHolder extends TreeNode.BaseNodeViewHolder {
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.subgroup_item, null, false);
 
+
         subgroupTV = view.findViewById(R.id.subgroup_tv);
 
         subgroupTV.setText(value.toString());

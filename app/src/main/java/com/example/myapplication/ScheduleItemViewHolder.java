@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import com.unnamed.b.atv.model.TreeNode;
@@ -24,14 +24,16 @@ public class ScheduleItemViewHolder extends TreeNode.BaseNodeViewHolder {
     }
 
     @Override
-    public View createNodeView(TreeNode node, Object value) {
+    public View createNodeView(TreeNode node, final Object value) {
 
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.schedule_item, null, false);
 
         scheduleTV = view.findViewById(R.id.schedule_name_schedule_tv);
 
+
         scheduleTV.setText(value.toString());
+
         return view;
     }
 
